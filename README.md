@@ -4,7 +4,7 @@ This is a starter project for 'Dive into data with Apache Spark' workshop on Cod
 
 ### Prerequisites ###
 
-* Clone this repo https://bitbucket.org/zygm0nt/codepot-scala-starter/
+* Clone this repo https://github.com/codepot-spark/spark-workshop
 * Get an IntelliJ Idea with Scala support installed https://www.jetbrains.com/idea/download/
 
 ### Starter project structure ###
@@ -13,11 +13,11 @@ This is a typical sbt project with spark as a dependency and a few skeleton clas
 
 ### How to run my job? ###
 
-You can execute tests, e.g. com.allegrogroup.spark.jobs.ExampleSparkJobSpec
+You can execute tests, e.g. `com.allegrogroup.spark.jobs.ExampleSparkJobSpec`
 
 ### How to write my own job? ###
 
-You can follow an example of com.allegrogroup.spark.jobs.Example
+You can follow an example of `com.allegrogroup.spark.jobs.Example`
 
 ### Demo ###
 
