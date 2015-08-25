@@ -1,0 +1,6 @@
+snapshots
+bin
+journal
+target
+.vagrant
+.idea
