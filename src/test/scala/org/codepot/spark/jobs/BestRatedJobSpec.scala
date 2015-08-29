@@ -17,8 +17,10 @@ class BestRatedJobSpec extends Specification with SparkTest {
       val usersPath = getClass.getResource("/ml-1m/users")
       val outPath = new File(mkTempDir())
 
+      val args = Array("local", howMany, minRatingsFromEachGender, moviesPath.getPath, ratingsPath.getPath, usersPath.getPath, outPath.getPath)
+
       // when
-      // call your job here
+      BestRatedJob.main(args)
 
       // then
       val resultInFile = getOutputData(outPath.getPath)

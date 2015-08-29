@@ -9,6 +9,7 @@ case class Example(master: String, jobConfig: ExampleConfig) extends SparkJob(ma
   def runJob(sc: SparkContext): Unit = {
     val rdd: RDD[StatsRow] = sc.textFile(jobConfig.inputDirectory).map(toStatsRow)
 
+
     val byKey = rdd
       .map(stats => (stats.name, stats))
       .reduceByKey((stats1, stats2) => StatsRow(stats1.name, stats1.count + stats2.count))

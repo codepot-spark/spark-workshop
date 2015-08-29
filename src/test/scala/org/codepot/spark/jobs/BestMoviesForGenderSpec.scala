@@ -17,8 +17,10 @@ class BestMoviesForGenderSpec extends Specification with SparkTest {
       val usersPath = getClass.getResource("/ml-1m/users")
       val outPath = new File(mkTempDir())
 
+      val args = Array("local", howMany, minRatingsFromEachGender, moviesPath.getPath, ratingsPath.getPath, usersPath.getPath, outPath.getPath)
+
       // when
-      // call your job here
+      BestMoviesForGenderJob.main(args)
 
       // then
       val bestMale = getOutputData(outPath.getPath + "/male")
