@@ -18,7 +18,7 @@
     <logger name="com.datastax.driver.core.ControlConnection">
         <level value="off"/>
     </logger>
-    <logger name="com.allegrogroup">
+    <logger name="org.codepot">
         <level value="INFO"/>
     </logger>
 

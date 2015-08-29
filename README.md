@@ -13,11 +13,14 @@ This is a typical sbt project with spark as a dependency and a few skeleton clas
 
 ### How to run my job? ###
 
-You can execute tests, e.g. `com.allegrogroup.spark.jobs.ExampleSparkJobSpec`
+You can execute tests, e.g. `org.codepot.jobs.ExampleSparkJobSpec`
+
+type `./sbt tests` to run all tests
+type `./sbt 'test-only ./sbt test-only org.codepot.jobs.ExampleSparkJobSpec'`
 
 ### How to write my own job? ###
 
-You can follow an example of `com.allegrogroup.spark.jobs.Example`
+You can follow an example of `org.codepot.jobs.Example`
 
 ### Demo ###
 
@@ -27,4 +30,15 @@ Word count on some plain text data
         - in a repl
    - API basics
 
+### Data ###
 
+In (/src/test/resources/ml-1m) you have data from movielens database about movies, users and their ratings.
+It is a sample of 1M ratings, if you want more - you can download 20M sample from http://grouplens.org/datasets/movielens/ and put it in the same structure as ml-1m
+For a description of the data and its format see (/src/test/resources/ml-1m/README)
+
+### Tasks ###
+
+1. Word count on movie titles
+    - from movies database extract movie titles and do a word count
+2. Word count on movie titles with SQL
+   - same as in 1. but using Spark SQL
